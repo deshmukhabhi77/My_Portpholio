@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 :root{
     --bg-black-900:#f2f2fc;
     --bg-black-100:#fdf9ff;
@@ -6,6 +7,8 @@
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
 }
+
+/* Dark mode variables */
 body.dark{
     --bg-black-900:#151515;
     --bg-black-100:#222222;
@@ -21,6 +24,7 @@ body{
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -28,12 +32,16 @@ body{
     text-decoration: none;
     box-sizing: border-box;
 }
-::before,::after{
+
+::before,
+::after{
     box-sizing: border-box;
 }
+
 ul{
     list-style: none;
 }
+
 .section{
     background: var(--bg-black-900);
     min-height: 100vh;
@@ -41,36 +49,44 @@ ul{
     padding: 0 30px;
     opacity: 1;
 }
+
 .hidden{
     display: none !important;
 }
+
 .main-content{
     padding-left: 270px;
 }
+
 .padd-15{
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .container{
     max-width: 1100px;
     width: 100%;
     margin: auto;
 }
+
 .section .container{
     padding-top: 60px;
     padding-bottom: 70px;
 }
+
 .section-title{
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 60px;
 }
+
 .section-title h2{
     font-size: 40px;
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
 }
+
 .section-title h2::before{
     content: '';
     height: 4px;
@@ -80,6 +96,7 @@ ul{
     top: 100%;
     left: 0;
 }
+
 .section-title h2::after{
     content: '';
     height: 4px;
@@ -90,6 +107,7 @@ ul{
     left: 0;
     margin-top: 8px;
 }
+
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +115,8 @@ ul{
     margin-right: -15px;
     position: relative;
 }
+
+/* Buttons */
 .btn{
     font-size: 16px;
     font-weight: 500;
@@ -110,12 +130,15 @@ ul{
     transition: all 0.3s ease;
     cursor: pointer;
 }
+
 .shadow-dark{
     box-shadow: 0 0 20px rgba(40, 46, 77, 0.15);
 }
+
 .btn:hover{
     transform: scale(1.05);
 }
+
 .btn:focus-visible{
     outline: 2px solid var(--skin-color);
     outline-offset: 2px;
@@ -134,7 +157,47 @@ ul{
     border: 0;
 }
 
-/* Aside */
+/* ===================== Preloader ===================== */
+
+#preloader{
+    position: fixed;
+    inset: 0;
+    background: var(--bg-black-900);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+#preloader .loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-black-50);
+    border-top-color: var(--skin-color);
+    animation: spin 1s linear infinite;
+}
+
+#preloader p{
+    margin-top: 12px;
+    color: var(--text-black-700);
+    font-size: 14px;
+}
+
+#preloader.hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===================== Aside ===================== */
+
 .aside{
     width: 270px;
     height: 100%;
@@ -149,12 +212,14 @@ ul{
     align-items: center;
     z-index: 10;
 }
+
 .aside .logo{
     position: absolute;
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
 }
+
 .aside .logo a{
     color:var(--text-black-900);
     font-weight: 700;
@@ -163,10 +228,12 @@ ul{
     letter-spacing: 5px;
     position: relative;
 }
+
 .aside .logo a span{
     font-family: 'Clicker Script', cursive;
     font-size: 40px;
 }
+
 .aside .logo a::before{
     content: '';
     position: absolute;
@@ -177,6 +244,7 @@ ul{
     bottom: 0;
     left: 0;
 }
+
 .aside .logo a::after{
     content: '';
     position: absolute;
@@ -187,6 +255,8 @@ ul{
     top: 0;
     right: 0;
 }
+
+/* nav-toggler is now a <button>, but class-based CSS still works */
 .aside .nav-toggler{
     height: 40px;
     width: 45px;
@@ -201,6 +271,7 @@ ul{
     align-items: center;
     justify-content: center;
 }
+
 .aside .nav-toggler span{
     height: 2px;
     width: 18px;
@@ -208,6 +279,7 @@ ul{
     display: inline-block;
     position: relative;
 }
+
 .aside .nav-toggler span::before{
     content: '';
     height: 2px;
@@ -217,6 +289,7 @@ ul{
     top: -6px;
     left: 0;
 }
+
 .aside .nav-toggler span::after{
     content: '';
     height: 2px;
@@ -226,13 +299,16 @@ ul{
     top: 6px;
     left: 0;
 }
+
 .aside .nav{
     margin-top: 50px;
 }
+
 .aside .nav li{
     margin-bottom: 20px;
     display: block;
 }
+
 .aside .nav li a{
     font-size: 16px;
     font-weight: 600;
@@ -241,51 +317,62 @@ ul{
     color: var(--text-black-900);
     padding: 5px 15px;
 }
+
 .aside .nav li .active{
     color: var(--skin-color);
 }
+
 .aside .nav li a i{
     margin-right: 15px;
 }
 
-/* Home */
+/* ===================== Home ===================== */
+
 .home{
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
 }
+
 .home .home-info{
     flex:0 0 60%;
     max-width: 60%;
 }
+
 h1.hello{
     font-size: 28px;
     margin: 15px 0;
 }
+
 h1.hello span{
     font-family: 'Clicker Script',cursive;
     font-size: 30px;
     font-weight: 700;
     color: var(--skin-color);
 }
+
 h2.my-profession{
     font-size: 30px;
     margin: 15px 0;
 }
+
 .typing{
     color: var(--skin-color);
 }
+
 .home-info p{
     margin-bottom: 70px;
     font-size: 20px;
     color: var(--text-black-700);
 }
+
 .home .home-img{
     flex:0 0 40%;
     max-width: 40%;
     text-align: center;
     position: relative;
 }
+
 .home-img::after{
     content: '';
     position: absolute;
@@ -296,6 +383,7 @@ h2.my-profession{
     right: 20px;
     bottom: -40px;
 }
+
 .home-img::before{
     content: '';
     position: absolute;
@@ -306,44 +394,53 @@ h2.my-profession{
     left: -20px;
     top: -40px;
 }
+
 .home .home-img img{
     margin: auto;
     border-radius: 5px;
     height: 400px;
 }
 
-/* About */
+/* ===================== About ===================== */
+
 .about .about-content{
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .about .about-content .about-text{
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .about .about-content .about-text h3{
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 700;
     color: var(--text-black-900);
 }
+
 .about .about-content .about-text h3 span{
     color: var(--skin-color);
 }
+
 .about .about-content .about-text p{
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
 }
+
 .about .about-content .personal-info{
     flex: 0 0 60%;
     max-width: 60%;
     margin-top: 40px;
 }
+
 .about .about-content .personal-info .info-item{
     flex: 0 0 50%;
     max-width: 50%;
 }
+
 .about .about-content .personal-info .info-item p{
     font-weight: 600;
     padding: 10px 0;
@@ -351,21 +448,25 @@ h2.my-profession{
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
 }
+
 .about .about-content .personal-info .info-item p span{
     font-weight: 400;
     color: var(--text-black-700);
     margin-left: 4px;
     display: inline-block;
 }
+
 .about .about-content .skills{
     flex: 0 0 40%;
     max-width: 40%;
     margin-top: 40px;
 }
+
 .about .about-content .skills .skill-item{
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .about .about-content .skills .skill-item h5{
     line-height: 40px;
     font-weight: 600 ;
@@ -373,6 +474,7 @@ h2.my-profession{
     color: var(--text-black-900);
     text-transform: capitalize;
 }
+
 .about .about-content .skills .skill-item .progress{
     background-color: var(--bg-black-50);
     height: 7px;
@@ -380,9 +482,11 @@ h2.my-profession{
     width: 100%;
     position: relative;
 }
+
 .about .about-content .skills .skill-item{
     margin-bottom: 25px;
 }
+
 .about .about-content .skills .skill-item .progress .progress-in{
     position: absolute;
     left: 0;
@@ -391,6 +495,7 @@ h2.my-profession{
     border-radius: 4px;
     background-color: var(--skin-color);
 }
+
 .about .about-content .skills .skill-item .skill-percent{
     position: absolute;
     right: 0;
@@ -399,22 +504,26 @@ h2.my-profession{
     font-weight: 400;
     line-height: 40px;
 }
+
 .about .about-content .Education,
 .about .about-content .Certificate{
     flex: 0 0 50%;
     max-width: 50%;
     margin-top: 30px;
 }
+
 .about .about-content h3.title{
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
     color: var(--text-black-900);
 }
+
 .about .about-content .timeline-box{
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .about .about-content .timeline{
     background-color: var(--bg-black-100);
     padding: 30px 15px;
@@ -423,14 +532,17 @@ h2.my-profession{
     width: 100%;
     position: relative;
 }
+
 .about .about-content .timeline .timeline-item{
     position: relative;
     padding-left: 37px;
     padding-bottom: 50px;
 }
+
 .about .about-content .timeline .timeline-item:last-child{
     padding-bottom: 0;
 }
+
 .about .about-content .timeline .timeline-item::before{
     content: '';
     width: 1px;
@@ -440,6 +552,7 @@ h2.my-profession{
     top: 0;
     background-color: var(--skin-color);
 }
+
 .about .about-content .timeline .circle-dot{
     position: absolute;
     left: 0;
@@ -450,15 +563,18 @@ h2.my-profession{
     background-color: var(--skin-color);
 }
 
-/* Service */
+/* ===================== Service ===================== */
+
 .service .container{
     padding-bottom: 40px;
 }
+
 .service .service-item{
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
 }
+
 .service .service-item .service-item-inner{
     background-color: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
@@ -467,9 +583,11 @@ h2.my-profession{
     text-align: center;
     transition: all 0.3s ease;
 }
+
 .service .service-item .service-item-inner:hover{
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
 .service .service-item .service-item-inner .icon{
     height: 60px;
     width: 60px;
@@ -479,19 +597,23 @@ h2.my-profession{
     text-align: center;
     transition: all 0.3s ease;
 }
+
 .service .service-item .service-item-inner .icon i{
     font-size: 40px;
     line-height: 60px;
     color: var(--skin-color);
     transition: all 0.3s ease;
 }
+
 .service .service-item .service-item-inner:hover .icon{
     background: var(--skin-color);
 }
+
 .service .service-item .service-item-inner:hover .icon i{
     font-size: 25px;
     color: #ffffff;
 }
+
 .service .service-item .service-item-inner h3,
 .service .service-item .service-item-inner h4{
     font-size: 18px;
@@ -500,69 +622,82 @@ h2.my-profession{
     font-weight: 700;
     text-transform: capitalize;
 }
+
 .service .service-item .service-item-inner p{
     font-size: 16px;
     color: var(--text-black-700);
     line-height: 20px;
 }
 
-/* Portfolio */
+/* ===================== Portfolio ===================== */
+
 .portfolio .container{
     padding-bottom: 40px;
 }
+
 .portfolio .portfolio-heading{
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 40px;
 }
+
 .portfolio .portfolio-heading h2,
 .portfolio .portfolio-heading h3{
     color: var(--text-black-900);
     font-weight: 500;
 }
+
 .portfolio .portfolio-item{
     flex: 0 0 50%;
     max-width: 50%;
     margin-bottom: 30px;
 }
+
 .portfolio .portfolio-item-inner{
     border: 6px solid var(--bg-black-100);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
 }
+
 .portfolio .portfolio-item-inner .portfolio-img img{
     height: 360px;
     width: 100%;
     display: block;
 }
 
-/* Contact */
+/* ===================== Contact ===================== */
+
 .contact-title{
     color: var(--skin-color);
     text-align: center;
     font-size: 25px;
     margin-bottom: 20px;
 }
+
 .contact-sub-title{
     color: var(--text-black-900);
     text-align: center;
     font-size: 15px;
     margin-bottom: 60px;
 }
+
 .contact .contact-info-item{
     flex: 0 0 33.33%;
     max-width: 33.33%;
     text-align: center;
     margin-bottom: 60px;
 }
+
 .contact .contact-info-item .icon{
     display: inline-block;
 }
+
 .contact .contact-info-item .icon i{
     font-size: 25px;
     color: var(--skin-color);
 }
+
 .contact .contact-info-item h4{
     font-size: 18px;
     font-weight: 700;
@@ -570,31 +705,38 @@ h2.my-profession{
     text-transform: capitalize;
     margin: 15px 0 5px;
 }
+
 .contact .contact-info-item p a{
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
     font-weight: 400;
 }
+
 a{
     font-size: 16px;
     color: var(--text-black-700);
 }
+
 .contact .contact-form{
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .contact .contact-form .col-6{
     flex: 0 0 50%;
     max-width: 50%;
 }
+
 .contact .contact-form .col-12{
     flex: 0 0 100%;
     max-width: 100%;
 }
+
 .contact .contact-form .form-item{
     margin-bottom: 30px;
 }
+
 .contact .contact-form .form-item .form-control{
     width: 100%;
     height: 50px;
@@ -606,23 +748,28 @@ a{
     color: var(--text-black-700);
     transition: all 0.3s ease;
 }
+
 .contact .contact-form .form-control:focus{
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
 .contact .contact-form .form-item textarea.form-control{
     height: 140px;
 }
+
 .contact .contact-form .btn{
     height: 50px;
     padding: 0 50px;
 }
+
 #msg{
     color: #61b752;
     margin-top: -35px;
     display: block;
 }
 
-/* Responsive */
+/* ===================== Responsive ===================== */
+
 @media (max-width:1199px){
     .aside{
         display: none;
@@ -635,6 +782,7 @@ a{
         margin-left: 0;
     }
 }
+
 @media (max-width:991px){
     .contact .contact-info-item,
     .portfolio .portfolio-item,
@@ -650,6 +798,7 @@ a{
         display: none;
     }
 }
+
 @media (max-width:767px){
     .contact .contact-form .col-6,
     .contact .contact-info-item,
