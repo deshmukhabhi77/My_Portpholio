@@ -29,8 +29,17 @@
     transition: all 0.3s ease;
     border-radius: 50%;
 }
-.style-switcher s.icon i{
-    line-height: 400px;
+.style-switcher .s-icon:focus-visible{
+    outline: 2px solid var(--skin-color);
+    outline-offset: 2px;
+}
+.style-switcher .colors span:focus-visible,
+.style-switcher .colors button:focus-visible{
+    outline: 2px solid var(--skin-color);
+    outline-offset: 2px;
+}
+.style-switcher .s-icon i{
+    line-height: 40px;
 }
 .style-switcher .style-switcher-toggler{
     top: 0;
@@ -50,12 +59,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.style-switcher .colors span{
+.style-switcher .colors span,
+.style-switcher .colors button{
     display: inline-block;
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    border: 1px solid red;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
 }
 .style-switcher .color-1{
     background: #ec1839;

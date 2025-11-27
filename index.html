@@ -4,83 +4,172 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        name="description"
+        content="Portfolio of Abhishek Shashikant Deshmukh — Python developer and data enthusiast."
+    >
     <!-- CSS Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/color-1.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="css/skins/color-1.css"
+        class="alternate-style"
+        title="color-1"
+    >
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
     <!-- Style Switcher -->
-    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
-    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+    <link
+        rel="stylesheet"
+        href="css/skins/color-2.css"
+        class="alternate-style"
+        title="color-2"
+        disabled
+    >
+    <link
+        rel="stylesheet"
+        href="css/skins/color-3.css"
+        class="alternate-style"
+        title="color-3"
+        disabled
+    >
+    <link
+        rel="stylesheet"
+        href="css/skins/color-4.css"
+        class="alternate-style"
+        title="color-4"
+        disabled
+    >
+    <link
+        rel="stylesheet"
+        href="css/skins/color-5.css"
+        class="alternate-style"
+        title="color-5"
+        disabled
+    >
     <link rel="stylesheet" href="css/style-switcher.css">
 
     <!-- Title -->
-    <title>Deshmukh Abhishek</title>
+    <meta name="theme-color" content="#ec1839">
+    <title>Abhishek Deshmukh | Python Developer</title>
 </head>
 
 <body>
     <!-- Main Content -->
     <div class="main-container">
         <!-- Aside Start -->
-        <div class="aside">
+        <aside class="aside" aria-label="Main navigation">
             <div class="logo">
-                <a href="#"><span>D</span>eshmukh</a>
+                <a href="#home" aria-label="Go to home section">
+                    <span>D</span>eshmukh
+                </a>
             </div>
-            <div class="nav-toggler">
+            <button
+                class="nav-toggler"
+                type="button"
+                aria-label="Toggle navigation"
+            >
                 <span></span>
-            </div>
-            <ul class="nav">
-                <li> <a href="#home" class="active"> <i class="ri-home-heart-fill"></i>Home</a></li>
-                <li> <a href="#about"> <i class="ri-user-fill"></i>About</a></li>
-                <li> <a href="#services"> <i class="ri-list-check"></i>Services</a></li>
-                <li> <a href="#portfolio"> <i class="ri-suitcase-fill"></i>Protfolio</a></li>
-                <li> <a href="#contact"> <i class="ri-chat-smile-3-fill"></i>Contact</a></li>
-            </ul>
-        </div>
+            </button>
+            <nav aria-label="Primary">
+                <ul class="nav">
+                    <li>
+                        <a href="#home" class="active">
+                            <i class="ri-home-heart-fill" aria-hidden="true"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class="ri-user-fill" aria-hidden="true"></i>
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#services">
+                            <i class="ri-list-check" aria-hidden="true"></i>
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">
+                            <i class="ri-suitcase-fill" aria-hidden="true"></i>
+                            Portfolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <i class="ri-chat-smile-3-fill" aria-hidden="true"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
         <!-- Aside End -->
+
         <!-- Main Content start -->
-        <div class="main-content">
+        <main class="main-content">
             <!-- Home Section Start -->
-            <section class="home section" id="home">
+            <section class="home section" id="home" aria-labelledby="home-title">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <h3 class="hello">Hello, My name is <span class="name">Abhishek Shashikant Deshmukh</span></h3>
-                            <h3 class="my-profession">I' m a <span class="typing">Python Developer</span></h3>
+                            <h1 class="hello" id="home-title">
+                                Hello, my name is
+                                <span class="name">Abhishek Shashikant Deshmukh</span>
+                            </h1>
+                            <h2 class="my-profession">
+                                I'm a <span class="typing">Python Developer</span>
+                            </h2>
                             <p>
-                                I am a B.Sc. student with a lot of firepower inside me for working with the company to
-                                gain experience and take my skills to the next level, where I can help in the
-                                development of the company by being a loyal employee.
+                                I am a B.Sc. graduate with a strong interest in Python development,
+                                data science, and web technologies. I’m eager to learn, gain
+                                experience, and contribute to the growth of the organization I work with.
                             </p>
                             <a href="#contact" class="btn hire-me">Hire Me</a>
                         </div>
                         <div class="home-img padd-15">
-                            <img src="images/saburo.png" alt="My Image">
+                            <img
+                                src="images/saburo.png"
+                                alt="Portrait of Abhishek Deshmukh"
+                                loading="lazy"
+                            >
                         </div>
                     </div>
                 </div>
             </section>
             <!-- Home Section End -->
+
             <!-- About Section Start -->
-            <section class="about section" id="about">
+            <section class="about section" id="about" aria-labelledby="about-title">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>About Me</h2>
+                            <h2 id="about-title">About Me</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="about-content padd-15">
                             <div class="row">
                                 <div class="about-text padd-15">
-                                    <h3>I'm Abhishek Deshmukh and I'm a <span>Python Developer</span></h3>
+                                    <h3>
+                                        I'm Abhishek Deshmukh and I'm a
+                                        <span>Python Developer</span>
+                                    </h3>
                                     <p>
-                                        I am living in chh.Sambhajinagar, Maharashtra and have knowledge of C, 
-                                        C++, Python, HTML, CSS, Power BI, ML, DL, AI, and some knowledge of PHP and SQL. 
-                                        My interests include video games, coding, and web development.
+                                        I live in Chhatrapati Sambhajinagar, Maharashtra, and have knowledge of
+                                        C, C++, Python, HTML, CSS, Power BI, Machine Learning, Deep Learning, AI,
+                                        and basic PHP and SQL. My interests include video games, coding,
+                                        and web development.
                                     </p>
                                 </div>
                             </div>
@@ -94,21 +183,42 @@
                                             <p>Age : <span>23</span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Email : <span><a
-                                                        href="mailto:deshmukhabhi9098@gmail.com?">deshmukhabhi9098@gmail.com</a></span>
+                                            <p>
+                                                Email :
+                                                <span>
+                                                    <a href="mailto:deshmukhabhi9098@gmail.com">
+                                                        deshmukhabhi9098@gmail.com
+                                                    </a>
+                                                </span>
                                             </p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Linkdin : <span><a href="https://www.linkedin.com/in/abhishek-deshmukh-4903062a3/">Deshmukh Abhishek Shashikant</a></span></p>
+                                            <p>
+                                                LinkedIn :
+                                                <span>
+                                                    <a
+                                                        href="https://www.linkedin.com/in/abhishek-deshmukh-4903062a3/"
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                    >
+                                                        Deshmukh Abhishek Shashikant
+                                                    </a>
+                                                </span>
+                                            </p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Degree : <span>B.Sc(P,E,CS)</span></p>
+                                            <p>Degree : <span>B.Sc (P, E, CS)</span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>Phone : <span><a href="tel:820-849-8488">+91 7770021841</a></span></p>
+                                            <p>
+                                                Phone :
+                                                <span>
+                                                    <a href="tel:+917770021841">+91 7770021841</a>
+                                                </span>
+                                            </p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>City : <span>Chh.Sambhajinagar</span></p>
+                                            <p>City : <span>Chhatrapati Sambhajinagar</span></p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Freelance : <span>Available</span></p>
@@ -124,7 +234,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="skills padd-15">
+                                <div class="skills padd-15" aria-label="Skills">
                                     <div class="row">
                                         <div class="skill-item padd-15">
                                             <h5>Python</h5>
@@ -155,17 +265,17 @@
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <h5>HTLM</h5>
+                                            <h5>HTML</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 25%;"></div>
-                                                <div class="skill-percent">25%</div>
+                                                <div class="progress-in" style="width: 50%;"></div>
+                                                <div class="skill-percent">50%</div>
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
                                             <h5>CSS</h5>
                                             <div class="progress">
-                                                <div class="progress-in" style="width: 25%;"></div>
-                                                <div class="skill-percent">25%</div>
+                                                <div class="progress-in" style="width: 50%;"></div>
+                                                <div class="skill-percent">50%</div>
                                             </div>
                                         </div>
                                     </div>
@@ -177,73 +287,96 @@
                                     <h3 class="title">Education</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
+                                            <div class="timeline shadow-dark" aria-label="Education timeline">
                                                 <!-- TimeLine Item -->
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="ri-calendar-check-fill"></i> 2020-2023
+                                                        <i class="ri-calendar-check-fill" aria-hidden="true"></i>
+                                                        2020–2023
                                                     </h3>
                                                     <h4 class="timeline-title">B.Sc</h4>
-                                                    <p class="timeline-text">Completed Bachelor of Science in Computer Science.</p>
+                                                    <p class="timeline-text">
+                                                        Completed Bachelor of Science in Computer Science.
+                                                    </p>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="ri-calendar-check-fill"></i> 2019-2020
+                                                        <i class="ri-calendar-check-fill" aria-hidden="true"></i>
+                                                        2019–2020
                                                     </h3>
-                                                    <h4 class="timeline-title">12 <sup>Th</sup></h4>
-                                                    <p class="timeline-text">Completed Higher Secondary School Certificate (HSC) under Maharashtra State Board.</p>
+                                                    <h4 class="timeline-title">12<sup>th</sup></h4>
+                                                    <p class="timeline-text">
+                                                        Completed Higher Secondary School Certificate (HSC)
+                                                        under Maharashtra State Board.
+                                                    </p>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="ri-calendar-check-fill"></i> 2017-2018
+                                                        <i class="ri-calendar-check-fill" aria-hidden="true"></i>
+                                                        2017–2018
                                                     </h3>
-                                                    <h4 class="timeline-title">10 <sup>Th</sup></h4>
-                                                    <p class="timeline-text">Completed Secondary School Certificate (SSC) under Maharashtra State Board.</p>
+                                                    <h4 class="timeline-title">10<sup>th</sup></h4>
+                                                    <p class="timeline-text">
+                                                        Completed Secondary School Certificate (SSC)
+                                                        under Maharashtra State Board.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="Certificate padd-15">
-                                    <h3 class="title">Certificate</h3>
+                                    <h3 class="title">Certificates</h3>
                                     <div class="row">
                                         <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
+                                            <div class="timeline shadow-dark" aria-label="Certificates timeline">
                                                 <!-- TimeLine Item -->
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="ri-calendar-todo-fill"></i>
+                                                        <i class="ri-calendar-todo-fill" aria-hidden="true"></i>
                                                     </h3>
-                                                    <h4 class="timeline-title">HTML/CSS 7 Day Bootcamp</h4>
-                                                    <p class="timeline-text"></p>
+                                                    <h4 class="timeline-title">HTML/CSS 7-Day Bootcamp</h4>
+                                                    <p class="timeline-text">
+                                                        Completed a hands-on bootcamp covering HTML, CSS,
+                                                        and responsive design basics.
+                                                    </p>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="ri-calendar-todo-fill"></i>
+                                                        <i class="ri-calendar-todo-fill" aria-hidden="true"></i>
                                                     </h3>
                                                     <h4 class="timeline-title">Data Science Certificate</h4>
-                                                    <p class="timeline-text"></p>
+                                                    <p class="timeline-text">
+                                                        Learned foundational data analysis, visualization,
+                                                        and basic machine learning concepts.
+                                                    </p>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="ri-calendar-todo-fill"></i> 
+                                                        <i class="ri-calendar-todo-fill" aria-hidden="true"></i>
                                                     </h3>
                                                     <h4 class="timeline-title">C++ Certificate</h4>
-                                                    <p class="timeline-text"></p>
+                                                    <p class="timeline-text">
+                                                        Gained understanding of object-oriented programming
+                                                        and problem-solving using C++.
+                                                    </p>
                                                 </div>
                                                 <div class="timeline-item">
                                                     <div class="circle-dot"></div>
                                                     <h3 class="timeline-date">
-                                                        <i class="ri-calendar-todo-fill"></i> 
+                                                        <i class="ri-calendar-todo-fill" aria-hidden="true"></i>
                                                     </h3>
-                                                    <h4 class="timeline-title">C Programing Certificate</h4>
-                                                    <p class="timeline-text"></p>
+                                                    <h4 class="timeline-title">C Programming Certificate</h4>
+                                                    <p class="timeline-text">
+                                                        Learned core programming concepts, data structures,
+                                                        and algorithms using C.
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -255,160 +388,223 @@
                 </div>
             </section>
             <!-- About Section End -->
+
             <!-- Services Section Start -->
-            <section class="service section" id="services">
+            <section class="service section" id="services" aria-labelledby="services-title">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Services</h2>
+                            <h2 id="services-title">Services</h2>
                         </div>
                     </div>
                     <div class="row">
                         <!-- Service item Start -->
-                        <div class="service-item">
+                        <article class="service-item padd-15">
                             <div class="service-item-inner">
                                 <div class="icon">
-                                    <i class="ri-html5-fill"></i>
+                                    <i class="ri-html5-fill" aria-hidden="true"></i>
                                 </div>
-                                <h4>Web Design</h4>
-                                <p>I like to design web pages with some sort of magic that makes them come to life.</p>
+                                <h3>Web Design</h3>
+                                <p>
+                                    I enjoy designing clean, responsive web pages that focus on usability
+                                    and simple, modern layouts.
+                                </p>
+                            </div>
+                        </article>
+                        <!-- Service item End -->
 
-                            </div>
-                        </div>
-                        <!-- Service item End -->
                         <!-- Service item Start -->
-                        <div class="service-item padd-15">
+                        <article class="service-item padd-15">
                             <div class="service-item-inner">
                                 <div class="icon">
-                                    <i class="ri-code-box-fill"></i>
+                                    <i class="ri-code-box-fill" aria-hidden="true"></i>
                                 </div>
-                                <h4>Programmer</h4>
-                                <p>With okay skills in C, C++, Python, and some Data Science, my coding taste is pretty similar to my overall approach—somewhere in the middle, not great, not bad.</p>
+                                <h3>Programming</h3>
+                                <p>
+                                    I write code in C, C++, and Python, with growing experience in data science,
+                                    automation scripts, and machine learning projects.
+                                </p>
                             </div>
-                        </div>
+                        </article>
                         <!-- Service item End -->
+
                         <!-- Service item Start -->
-                        <div class="service-item padd-15">
+                        <article class="service-item padd-15">
                             <div class="service-item-inner">
                                 <div class="icon">
-                                    <i class="ri-quill-pen-fill"></i>
+                                    <i class="ri-quill-pen-fill" aria-hidden="true"></i>
                                 </div>
-                                <h4>Gaming</h4>
-                                <p>I enjoy gaming as a way to relax, explore new worlds, and challenge myself. Whether it's strategy, storytelling, or fast-paced action, gaming keeps my mind sharp and fuels my creativity.                                </p>
+                                <h3>Gaming Enthusiast</h3>
+                                <p>
+                                    I enjoy gaming as a way to relax, explore new worlds, and challenge myself.
+                                    It keeps my mind sharp and inspires creative problem-solving.
+                                </p>
                             </div>
-                        </div>
+                        </article>
                         <!-- Service item End -->
                     </div>
                 </div>
             </section>
             <!-- Services Section End -->
+
             <!-- Portfolio Section Start -->
-            <section class="portfolio section" id="portfolio">
+            <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
+                            <h2 id="portfolio-title">Portfolio</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="portfolio-heading padd-15">
-                            <h2>My Last Projects:</h2>
+                            <h3>My Recent Projects</h3>
                         </div>
                     </div>
                     <div class="row">
                         <!-- Portfolio Item Start -->
-                        <div class="portfolio-item padd-15">
+                        <article class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/CRE.jpg" alt="addimage">
+                                    <img
+                                        src="images/CRE.jpg"
+                                        alt="Screenshot of a recent project"
+                                        loading="lazy"
+                                    >
                                 </div>
                             </div>
-                        </div>
+                        </article>
                         <!-- Portfolio Item End -->
                         <!-- Portfolio Item Start -->
-                        <div class="portfolio-item padd-15">
+                        <article class="portfolio-item padd-15">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/Picture1.jpg" alt="addimage">
+                                    <img
+                                        src="images/Picture1.jpg"
+                                        alt="Screenshot of another recent project"
+                                        loading="lazy"
+                                    >
                                 </div>
                             </div>
-                        </div>
+                        </article>
                         <!-- Portfolio Item End -->
                     </div>
                 </div>
             </section>
             <!-- Portfolio Section End -->
+
             <!-- Contact Section Start -->
-            <section class="contact section" id="contact">
+            <section class="contact section" id="contact" aria-labelledby="contact-title">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
+                            <h2 id="contact-title">Contact Me</h2>
                         </div>
                     </div>
-                    <h3 class="contact-title padd-15">Do You Have Any Question ? </h3>
-                    <h4 class="contact-sub-title padd-15">I'M AT Your Services</h4>
+                    <h3 class="contact-title padd-15">Do you have any questions?</h3>
+                    <h4 class="contact-sub-title padd-15">I'm at your service</h4>
                     <div class="row">
                         <!-- Contact Info Item Start -->
                         <div class="contact-info-item padd-15">
                             <div class="icon">
-                                <i class="ri-phone-fill"></i>
+                                <i class="ri-phone-fill" aria-hidden="true"></i>
                             </div>
-                            <h4>Call With Me On</h4>
-                            <p><a href="tel:820-849-8488">+91 7770021841</a></p>
+                            <h4>Call Me On</h4>
+                            <p><a href="tel:+917770021841">+91 7770021841</a></p>
                         </div>
                         <!-- Contact Info Item End -->
                         <!-- Contact Info Item Start -->
                         <div class="contact-info-item padd-15">
                             <div class="icon">
-                                <i class="ri-mail-fill"></i>
+                                <i class="ri-mail-fill" aria-hidden="true"></i>
                             </div>
                             <h4>Email</h4>
-                            <p><a href="mailto:deshmukhabhi9098@gmail.com?">deshmukhabhi9098@gmail.com</a></p>
+                            <p>
+                                <a href="mailto:deshmukhabhi9098@gmail.com">
+                                    deshmukhabhi9098@gmail.com
+                                </a>
+                            </p>
                         </div>
                         <!-- Contact Info Item End -->
                         <div class="contact-info-item padd-15">
                             <div class="icon">
-                                <i class="ri-linkedin-box-fill"></i>
+                                <i class="ri-linkedin-box-fill" aria-hidden="true"></i>
                             </div>
-                            <h4>Linkdin</h4>
-                            <p><a href="https://www.linkedin.com/in/abhishek-deshmukh-4903062a3/">Deshmukh Abhishek Shashikant</a></p>
+                            <h4>LinkedIn</h4>
+                            <p>
+                                <a
+                                    href="https://www.linkedin.com/in/abhishek-deshmukh-4903062a3/"
+                                    target="_blank"
+                                    rel="noopener"
+                                >
+                                    Deshmukh Abhishek Shashikant
+                                </a>
+                            </p>
                         </div>
                         <!-- Contact Info Item End -->
                     </div>
-                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGE</h4>
+                    <h3 class="contact-title padd-15">Send me an email</h3>
+                    <h4 class="contact-sub-title padd-15">I'm very responsive to messages</h4>
                     <!-- Contact Form -->
                     <div class="row">
                         <div class="contact-form padd-15">
-                            <form name="submit-to-google-sheet">
+                            <form name="submit-to-google-sheet" novalidate>
                                 <div class="row">
                                     <div class="form-item col-6 padd-15">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="Name" placeholder="Name"
-                                                required>
+                                            <label for="name" class="visually-hidden">Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="name"
+                                                name="Name"
+                                                placeholder="Name"
+                                                required
+                                                autocomplete="name"
+                                            >
                                         </div>
                                     </div>
                                     <div class="form-item col-6 padd-15">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="Email" placeholder="Email"
-                                                required>
+                                            <label for="email" class="visually-hidden">Email</label>
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                id="email"
+                                                name="Email"
+                                                placeholder="Email"
+                                                required
+                                                autocomplete="email"
+                                            >
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="Subject" placeholder="Subject"
-                                                required>
+                                            <label for="subject" class="visually-hidden">Subject</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="subject"
+                                                name="Subject"
+                                                placeholder="Subject"
+                                                required
+                                            >
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-item col-12 padd-15">
                                         <div class="form-group">
-                                            <textarea class="form-control" name="Message" placeholder="Message"
-                                                required></textarea>
+                                            <label for="message" class="visually-hidden">Message</label>
+                                            <textarea
+                                                class="form-control"
+                                                id="message"
+                                                name="Message"
+                                                placeholder="Message"
+                                                required
+                                                rows="5"
+                                            ></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -418,55 +614,105 @@
                                     </div>
                                 </div>
                             </form>
-                            <span id="msg"></span>
+                            <span id="msg" aria-live="polite"></span>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- Contact Section End -->
-        </div>
+        </main>
         <!-- Main Content End -->
+
         <!-- Styling Switcher Start-->
-        <div class="style-switcher">
-            <div class="style-switcher-toggler s-icon">
-                <i class="ri-settings-4-fill"></i>
-            </div>
-            <div class="day-night s-icon">
-                <i class="ri-moon-clear-fill"></i>
-            </div>
+        <div class="style-switcher" aria-label="Theme style switcher">
+            <button
+                class="style-switcher-toggler s-icon"
+                type="button"
+                aria-label="Toggle style switcher"
+            >
+                <i class="ri-settings-4-fill" aria-hidden="true"></i>
+            </button>
+            <button
+                class="day-night s-icon"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <i class="ri-moon-clear-fill" aria-hidden="true"></i>
+            </button>
             <h4>Theme Colors</h4>
             <div class="colors">
-                <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-                <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-                <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-                <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-                <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                <button
+                    class="color-1"
+                    type="button"
+                    aria-label="Theme color 1"
+                ></button>
+                <button
+                    class="color-2"
+                    type="button"
+                    aria-label="Theme color 2"
+                ></button>
+                <button
+                    class="color-3"
+                    type="button"
+                    aria-label="Theme color 3"
+                ></button>
+                <button
+                    class="color-4"
+                    type="button"
+                    aria-label="Theme color 4"
+                ></button>
+                <button
+                    class="color-5"
+                    type="button"
+                    aria-label="Theme color 5"
+                ></button>
             </div>
         </div>
         <!-- Styling Switcher End-->
-        <!-- JS File -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-            referrerpolicy="no-referrer"></script>
-        <script src="js/script.js"></script>
-        <script src="js/style-switcher.js"></script>
     </div>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzlDIB3OW4DlAcpRaF9P_dKCltLkqdK6IAi-jcN-ngR6XwqXDWxq32ffyLG4Rz-FvJ0/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
 
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message Sent Successfully !!"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
+    <!-- JS File -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"
+        defer
+    ></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/style-switcher.js" defer></script>
+
+    <!-- Contact Form Script -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzlDIB3OW4DlAcpRaF9P_dKCltLkqdK6IAi-jcN-ngR6XwqXDWxq32ffyLG4Rz-FvJ0/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById('msg');
+        const submitBtn = form.querySelector('button[type="submit"]');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            const prev = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const res = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                });
+                if (!res.ok) throw new Error('Network error');
+
+                msg.textContent = 'Message sent successfully!';
+                form.reset();
+
+                setTimeout(() => {
+                    msg.textContent = '';
+                }, 5000);
+            } catch (err) {
+                msg.textContent = 'Failed to send. Please try again.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = prev;
+            }
+        });
     </script>
 </body>
 
